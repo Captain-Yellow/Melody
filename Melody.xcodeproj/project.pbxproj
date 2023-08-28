@@ -14,6 +14,12 @@
 		FDC1EFA92A9C744B00C5B50B /* MelodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFA82A9C744B00C5B50B /* MelodyTests.swift */; };
 		FDC1EFB32A9C744B00C5B50B /* MelodyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFB22A9C744B00C5B50B /* MelodyUITests.swift */; };
 		FDC1EFB52A9C744B00C5B50B /* MelodyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFB42A9C744B00C5B50B /* MelodyUITestsLaunchTests.swift */; };
+		FDC1EFC22A9C74BB00C5B50B /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFC12A9C74BB00C5B50B /* JsonModel.swift */; };
+		FDC1EFC62A9C776400C5B50B /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFC52A9C776400C5B50B /* Secret.swift */; };
+		FDC1EFCA2A9C78E500C5B50B /* DataManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFC92A9C78E500C5B50B /* DataManagerVM.swift */; };
+		FDC1EFCD2A9C79DA00C5B50B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */; };
+		FDC1EFCF2A9C83B900C5B50B /* MusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */; };
+		FDC1EFD22A9C947F00C5B50B /* UserComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFD12A9C947F00C5B50B /* UserComments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		FDC1EFAE2A9C744B00C5B50B /* MelodyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelodyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1EFB22A9C744B00C5B50B /* MelodyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyUITests.swift; sourceTree = "<group>"; };
 		FDC1EFB42A9C744B00C5B50B /* MelodyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDC1EFC12A9C74BB00C5B50B /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
+		FDC1EFC52A9C776400C5B50B /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		FDC1EFC92A9C78E500C5B50B /* DataManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerVM.swift; sourceTree = "<group>"; };
+		FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfo.swift; sourceTree = "<group>"; };
+		FDC1EFD12A9C947F00C5B50B /* UserComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserComments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */,
-				FDC1EF992A9C744A00C5B50B /* ContentView.swift */,
+				FDC1EFC42A9C74CB00C5B50B /* View */,
+				FDC1EFC32A9C74C000C5B50B /* Model */,
+				FDC1EFCB2A9C78EC00C5B50B /* ViewModel */,
 				FDC1EF9B2A9C744B00C5B50B /* Assets.xcassets */,
 				FDC1EF9D2A9C744B00C5B50B /* Preview Content */,
 			);
@@ -125,6 +139,42 @@
 				FDC1EFB42A9C744B00C5B50B /* MelodyUITestsLaunchTests.swift */,
 			);
 			path = MelodyUITests;
+			sourceTree = "<group>";
+		};
+		FDC1EFC32A9C74C000C5B50B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDC1EFC12A9C74BB00C5B50B /* JsonModel.swift */,
+				FDC1EFC52A9C776400C5B50B /* Secret.swift */,
+				FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDC1EFC42A9C74CB00C5B50B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDC1EF992A9C744A00C5B50B /* ContentView.swift */,
+				FDC1EFD02A9C83BD00C5B50B /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDC1EFCB2A9C78EC00C5B50B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDC1EFC92A9C78E500C5B50B /* DataManagerVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDC1EFD02A9C83BD00C5B50B /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */,
+				FDC1EFD12A9C947F00C5B50B /* UserComments.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC1EFC22A9C74BB00C5B50B /* JsonModel.swift in Sources */,
+				FDC1EFC62A9C776400C5B50B /* Secret.swift in Sources */,
+				FDC1EFD22A9C947F00C5B50B /* UserComments.swift in Sources */,
+				FDC1EFCF2A9C83B900C5B50B /* MusicInfo.swift in Sources */,
 				FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */,
+				FDC1EFCA2A9C78E500C5B50B /* DataManagerVM.swift in Sources */,
 				FDC1EF982A9C744A00C5B50B /* MelodyApp.swift in Sources */,
+				FDC1EFCD2A9C79DA00C5B50B /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
