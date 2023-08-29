@@ -18,7 +18,7 @@ struct UserComments: View {
     @ObservedObject var dataManager = DataManager()
     
     var body: some View {
-        List {//(dataManager.comments) { datum in
+        List(data) { datum in//(dataManager.comments) { datum in
             HStack {
                 AsyncImage(url: URL(string: Constant.imagePLaceHolder)) { image in
                     image.resizable()
@@ -31,10 +31,10 @@ struct UserComments: View {
                 }.padding(.trailing, 20)
                 
                 VStack(alignment: .leading, spacing: 10){
-                    Text("\(dataManager.comments[0].sender_username)")
+                    Text("Guest") //"\(dataManager.comments[0].sender_username)"
                         .bold()
                     
-                    Text("\(dataManager.comments[0].text)")
+                    Text("\(datum.text)")
                 }
             }
             
