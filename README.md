@@ -1,9 +1,6 @@
 # Melody
 iOS-SwiftUI-Music App
-<!--
-![Simulator Screenshot - iPhone 14 Pro - 2023-08-29 at 11 39 47](https://github.com/Captain-Yellow/Melody/assets/50849702/1669eb7c-6b34-48a7-89ec-cb58daaccb65)
-![Simulator Screenshot - iPhone 14 Pro - 2023-08-29 at 11 49 13](https://github.com/Captain-Yellow/Melody/assets/50849702/38f7cdc3-ddce-4424-a17a-5b6512bbaec1)
--->
 
-<img src="https://github.com/Captain-Yellow/Melody/assets/50849702/1669eb7c-6b34-48a7-89ec-cb58daaccb65" width="300" height="600" alt="Image 1">
-<img src="https://github.com/Captain-Yellow/Melody/assets/50849702/38f7cdc3-ddce-4424-a17a-5b6512bbaec1" width="300" height="600" alt="Image 2">
+
+<img src="https://github.com/Captain-Yellow/Melody/assets/50849702/2e1efc6d-082b-4263-b0a7-c1cba4f134d4" width="300" height="600" alt="Image 1">
+<img src="https://github.com/Captain-Yellow/Melody/assets/50849702/d168a584-536c-44eb-82a0-11198d9fe3ed" width="300" height="600" alt="Image 2">
