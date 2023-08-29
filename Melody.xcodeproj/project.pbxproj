@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD014E1C2A9E1ECB00AD0512 /* CommentsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */; };
+		FD4FEAF62A9DB9B60014B5FB /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */; };
 		FDC1EF982A9C744A00C5B50B /* MelodyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */; };
 		FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EF992A9C744A00C5B50B /* ContentView.swift */; };
 		FDC1EF9C2A9C744B00C5B50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC1EF9B2A9C744B00C5B50B /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsJson.swift; sourceTree = "<group>"; };
+		FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		FDC1EF942A9C744A00C5B50B /* Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyApp.swift; sourceTree = "<group>"; };
 		FDC1EF992A9C744A00C5B50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				FDC1EFC12A9C74BB00C5B50B /* JsonModel.swift */,
 				FDC1EFC52A9C776400C5B50B /* Secret.swift */,
 				FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */,
+				FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */,
 				FDC1EFD12A9C947F00C5B50B /* UserComments.swift */,
+				FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -308,7 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC1EFC22A9C74BB00C5B50B /* JsonModel.swift in Sources */,
+				FD014E1C2A9E1ECB00AD0512 /* CommentsJson.swift in Sources */,
 				FDC1EFC62A9C776400C5B50B /* Secret.swift in Sources */,
+				FD4FEAF62A9DB9B60014B5FB /* MusicPlayer.swift in Sources */,
 				FDC1EFD22A9C947F00C5B50B /* UserComments.swift in Sources */,
 				FDC1EFCF2A9C83B900C5B50B /* MusicInfo.swift in Sources */,
 				FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */,

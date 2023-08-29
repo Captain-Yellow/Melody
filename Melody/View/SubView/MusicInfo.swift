@@ -9,13 +9,16 @@ import SwiftUI
 
 struct MusicInfo: View {
     @State private var likeBT = false
-    @State private var playedTimes = 3203
-    @State private var likedTimes = 2093
+    @ObservedObject var musicInfo = DataManager()
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 0) {
             HStack() {
-                Text("Del")
+                Text(musicInfo.musicName)
+                    .onAppear {
+                        musicInfo.postMusicInfoRequest(from: Secret.musicApi, contentId: 12, contentType: 0)
+                    }
                     .padding(.leading, 20)
                     .bold()
                 
@@ -23,6 +26,7 @@ struct MusicInfo: View {
                 
                 Button(action: {
                     likeBT.toggle()
+                    musicInfo.postLikeRequset(from: Secret.musicApi, contentId: musicInfo.musicId, event: likeBT)
                 }) {
                     Image(systemName: likeBT ? "heart.fill" : "heart")
                         .resizable()
@@ -32,7 +36,10 @@ struct MusicInfo: View {
                 .padding(20)
             }
             HStack {
-                Text("Reaza Bahram")
+                Text(musicInfo.artistName)
+                    .onAppear {
+                        musicInfo.postMusicInfoRequest(from: Secret.musicApi, contentId: 12, contentType: 0)
+                    }
                     .foregroundColor(.gray)
                     .bold()
                     .padding(.leading, 20)
@@ -42,7 +49,7 @@ struct MusicInfo: View {
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
                     .padding(.leading, 20)
-                Text("\(playedTimes)")
+                Text("\(musicInfo.playedNumbers)")
                     .padding(.trailing, 10)
                 
                 Rectangle()
@@ -52,7 +59,7 @@ struct MusicInfo: View {
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
                     .padding(.leading, 10)
-                Text("\(likedTimes)")
+                Text("\(musicInfo.likeNumbers)")
                 
                 Spacer()
                 

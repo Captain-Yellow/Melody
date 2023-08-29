@@ -15,11 +15,12 @@ struct TableRow: Identifiable {
 
 struct UserComments: View {
     let data: [TableRow]
+    @ObservedObject var dataManager = DataManager()
     
     var body: some View {
-        List(data) { row in
+        List {//(dataManager.comments) { datum in
             HStack {
-                AsyncImage(url: URL(string: row.image)) { image in
+                AsyncImage(url: URL(string: Constant.imagePLaceHolder)) { image in
                     image.resizable()
                         .frame(width: 50, height: 50)
                         .cornerRadius(10)
@@ -29,8 +30,14 @@ struct UserComments: View {
                         .frame(width: 50, height: 50)
                 }.padding(.trailing, 20)
                 
-                Text(row.text)
+                VStack(alignment: .leading, spacing: 10){
+                    Text("\(dataManager.comments[0].sender_username)")
+                        .bold()
+                    
+                    Text("\(dataManager.comments[0].text)")
+                }
             }
+            
         }
     }
 }
