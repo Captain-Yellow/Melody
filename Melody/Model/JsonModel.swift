@@ -8,7 +8,7 @@
 import Foundation
 
 struct MusicJson: Codable {
-    static let musicImage = "https://media.npr.org/assets/music/news/2010/06/eminem-52893634f7c035450a7b5ff2e040cacb4012395e-s1100-c50.jpg"
+    static let musicImage = "https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80"
     static let musicLink = "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8"
 }
 
@@ -54,26 +54,3 @@ struct ContentLinks: Decodable {
     let content_path_flac: String
 }
 
-/*
-struct MusicJsonInfo: Decodable {
-    var data: data
-}
-
-struct data: Decodable {
-    var id: Int
-    var content: content
-}
-
-struct content: Decodable {
-    var id: Int
-    var artists: [[String]]
-    var play_number: Int
-    var like_number: Int
-}
-
-
-
-
-//var artists: [[String]]
-//var naem: String
-*/

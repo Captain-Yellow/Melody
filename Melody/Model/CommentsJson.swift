@@ -7,42 +7,88 @@
 
 import Foundation
 
-struct Response: Codable {
-    let data: [DataItem]
-    let message: Message
+struct CommentsJson: Decodable {
+    let data: [Comment]
+    let message: String
+    let statusCode: Int
+    let result: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case data, message
+        case statusCode = "status_code"
+        case result
+    }
 }
 
-struct DataItem: Codable {
+struct Comment: Decodable {
     let id: ID
-    let content_id: Int
-    let sender_user_id: Int
+    let contentID: Int
+    let senderUserID: Int
     let text: String
-    let parent_comment_id: String?
-    let replies_comment: RepliesComment
-    let create_time: DateWrapper
-    let update_time: DateWrapper
-    let sender_username: String
+    let parentCommentID: Int?
+    let repliesComment: RepliesComment
+    let createTime: DateValue
+    let updateTime: DateValue
+    let senderUsername: String
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case contentID = "content_id"
+        case senderUserID = "sender_user_id"
+        case text
+        case parentCommentID = "parent_comment_id"
+        case repliesComment = "replies_comment"
+        case createTime = "create_time"
+        case updateTime = "update_time"
+        case senderUsername = "sender_username"
+    }
 }
 
-struct ID: Codable {
-    let Soid: String
+struct ID: Decodable {
+    let oid: String
+
+    enum CodingKeys: String, CodingKey {
+        case oid = "$oid"
+    }
 }
 
-struct RepliesComment: Codable {
+struct RepliesComment: Decodable {
     let currentLevel: Int
-    let currentLevelReplies: [Int]
-    let previousLevelReplies: [Int]
+    let currentLevelReplies: [String]
+    let previousLevelReplies: [String]
 }
 
-struct DateWrapper: Codable {
-    let date: Date
-    
+struct DateValue: Decodable {
+    let date: String
+
     enum CodingKeys: String, CodingKey {
         case date = "$date"
     }
 }
 
-struct Message: Codable {
-    let status_code: Int
-    let result: Bool
+
+
+class SendCumment: Encodable {
+    let text: String
+    let senderUserID: Int
+    let parentCommentID: String
+    
+    init(text: String, senderUserID: Int, parentCommentID: String) {
+        self.text = text
+        self.senderUserID = senderUserID
+        self.parentCommentID = parentCommentID
+        }
 }
+
+//extension SendCumment {
+//    func toDictionary() -> [String: Any] {
+//        let mirror = Mirror(reflecting: self)
+//        var result = [String : Any]
+//        for child in mirror.children {
+//            if let label = child.label {
+//                result[label] = child.value
+//            }
+//        }
+//        return result
+//    }
+//}

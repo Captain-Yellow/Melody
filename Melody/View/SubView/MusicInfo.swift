@@ -9,17 +9,19 @@ import SwiftUI
 
 struct MusicInfo: View {
     @State private var likeBT = false
+    @State var musicName = "Hli"
     @ObservedObject var musicInfo = DataManager()
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
             HStack() {
-                Text(musicInfo.musicName)
+                Text("Place Holder")
                     .onAppear {
-                        musicInfo.postMusicInfoRequest(from: Secret.musicApi, contentId: 12, contentType: 0)
+                        musicName = musicInfo.musicName
                     }
                     .padding(.leading, 20)
+                    .foregroundColor(.white)
                     .bold()
                 
                 Spacer()
@@ -31,45 +33,48 @@ struct MusicInfo: View {
                     Image(systemName: likeBT ? "heart.fill" : "heart")
                         .resizable()
                         .frame(width: 24, height: 24)
-                        .foregroundColor(likeBT ? .red : .black)
+                        .foregroundColor(likeBT ? .red : .white)
                 }
                 .padding(20)
             }
             HStack {
-                Text(musicInfo.artistName)
-                    .onAppear {
-                        musicInfo.postMusicInfoRequest(from: Secret.musicApi, contentId: 12, contentType: 0)
-                    }
+                Text("Place Holder")
+//                    .onAppear {
+//                        musicInfo.getMusicInfoRequest(from: Secret.musicApi, parameters: ["content_id": "12", "content_type": "0"])
+//                    }
                     .foregroundColor(.gray)
                     .bold()
                     .padding(.leading, 20)
             }
             HStack {
-                Text("Played")
+                Text("\(musicInfo.playedNumbers)")
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
                     .padding(.leading, 20)
-                Text("\(musicInfo.playedNumbers)")
+                Text("Played")
                     .padding(.trailing, 10)
+                    .foregroundColor(.white)
                 
                 Rectangle()
                     .frame(width: 1, height: 20)
                     .foregroundColor(.gray)
-                Text("Likes")
+                
+                Text("\(musicInfo.likeNumbers)")
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
                     .padding(.leading, 10)
-                Text("\(musicInfo.likeNumbers)")
+                Text("Likes")
+                    .foregroundColor(.white)
                 
                 Spacer()
                 
                 Button(action: {
-                    print("tapped")
+                    musicInfo.getShowCommentsRequest(from: Secret.musicApi, contentId: musicInfo.musicId, parameters: ["content_id" : "12"])
                 }) {
                     Image(systemName: "text.badge.plus")
                         .resizable()
                         .frame(width: 24, height: 24)
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                 }
                 .padding(20)
             }

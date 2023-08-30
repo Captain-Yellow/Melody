@@ -8,5 +8,10 @@
 import Foundation
 
 struct Secret {
-    static let musicApi = "http://127.0.0.1:8080/test"
+    static let musicApi = "http://demo.melodio.tech:9880/"
+    static let getMusicInfo = "content/display_content_detail_by_user_type/"
+    static let musicLikeApi = "/content_details/like_content/"
+    static let musicUnlikeApi = "/content_details/unlike_content/"
+    static let musicShowComments = "/comment/music/show_comments/"
+    static let musicAddComments = "/comment/music/add_comment/"
 }

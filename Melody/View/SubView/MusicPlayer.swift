@@ -9,40 +9,96 @@ import SwiftUI
 import AVKit
 
 struct MusicPlayer: View {
+    @ObservedObject var musicInfo = DataManager()
     @State private var playerState = false
-    @State private var sliderValue: Double = 24.0
+//    @State private var sliderValue: Double = 24.0
     
     var body: some View {
-        if let url = URL(string: MusicJson.musicLink) {
-            let player = AVPlayer(url: url)
+        let safeUrl = URL(string: musicInfo.musicSound)
+        let player = AVPlayer(url: safeUrl ?? URL(string: MusicJson.musicLink)!)
+        
+        HStack {
+            AsyncImage(url: URL(string: musicInfo.musicImage)) { image in
+                image.resizable()
+                    .resizable()
+                    .scaledToFill()
+                    .cornerRadius(5)
+                    .padding(.leading, 20)
+                    .frame(width: 70, height: 70, alignment: .center)
+            } placeholder: {
+                Image("placeHolderMusicImage")
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(5)
+                    .padding(.leading, 20)
+                    .frame(width: 70, height: 70, alignment: .center)
+            }
+            
+            VStack(alignment: .leading, spacing: 9) {
+                Text("Jadeh Royaha")
+                    .bold()
+                    .font(.system(size: 14))
+                    .foregroundColor(.white)
+                
+                Text("Reza Bahram")
+                    .font(.system(size: 10))
+                    .foregroundColor(.white)
+            }.padding(.trailing, 20)
             
             //            VideoPlayer(player: AVPlayer(url: url))
             //                .aspectRatio(contentMode: .fit)
             //                .padding()
             
-            Button(action: {
-                if playerState == false {
-                    player.play()
-                    playerState = true
-                } else {
-                    player.pause()
-                    playerState = false
+            Spacer()
+            
+            HStack {
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "backward.end.circle.fill")
+                        .resizable()
+                        .frame(width: 24, height: 24, alignment: .center)
                 }
+                
+                Button(action: {
+                    if playerState == false {
+                        player.play()
+                        playerState = true
+                    } else {
+                        player.pause()
+                        playerState = false
+                    }
+                }) {
+                    Image(systemName: playerState ? "pause.circle.fill" : "play.circle.fill")
+                        .resizable()
+                        .frame(width: 24, height: 24, alignment: .center)
+                }
+                
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "forward.end.circle.fill")
+                        .resizable()
+                        .frame(width: 24, height: 24, alignment: .center)
+                }
+                
+                //            VideoPlayerView(videoURL: url)
+                //            .frame(height: 300)
+                
+                //            VStack {
+                //                Slider(value: $sliderValue, in: 0...100)
+                //            }
+            }
+            .padding(.trailing, 30)
+            
+            Button(action: {
+                
             }) {
-                Image(systemName: playerState ? "pause" : "play")
+                Image(systemName: "music.note.list")
                     .resizable()
                     .frame(width: 24, height: 24, alignment: .center)
-            }
-            
-            //            VideoPlayerView(videoURL: url)
-            //            .frame(height: 300)
-            
-            
+            }.padding(.trailing, 20)
         }
-        
-        VStack {
-                    Slider(value: $sliderValue, in: 0...100)
-                }
     }
 }
 

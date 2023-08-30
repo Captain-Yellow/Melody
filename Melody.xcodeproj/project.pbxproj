@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD014E1C2A9E1ECB00AD0512 /* CommentsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */; };
+		FD297BD32A9F02510009DF87 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD297BD22A9F02510009DF87 /* SwiftUIView.swift */; };
 		FD4FEAF62A9DB9B60014B5FB /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */; };
 		FDC1EF982A9C744A00C5B50B /* MelodyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */; };
 		FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EF992A9C744A00C5B50B /* ContentView.swift */; };
@@ -22,6 +23,10 @@
 		FDC1EFCD2A9C79DA00C5B50B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */; };
 		FDC1EFCF2A9C83B900C5B50B /* MusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */; };
 		FDC1EFD22A9C947F00C5B50B /* UserComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EFD12A9C947F00C5B50B /* UserComments.swift */; };
+		FDEE93A12A9E774000FEBC44 /* LikesJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE93A02A9E774000FEBC44 /* LikesJson.swift */; };
+		FDEE93A32A9E78B700FEBC44 /* ErrorJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE93A22A9E78B700FEBC44 /* ErrorJson.swift */; };
+		FDEE93A72A9E8F0E00FEBC44 /* MusicPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE93A62A9E8F0E00FEBC44 /* MusicPage.swift */; };
+		FDEE93A92A9E952F00FEBC44 /* CurrentMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE93A82A9E952F00FEBC44 /* CurrentMusic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsJson.swift; sourceTree = "<group>"; };
+		FD297BD22A9F02510009DF87 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		FDC1EF942A9C744A00C5B50B /* Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyApp.swift; sourceTree = "<group>"; };
@@ -60,6 +66,11 @@
 		FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfo.swift; sourceTree = "<group>"; };
 		FDC1EFD12A9C947F00C5B50B /* UserComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserComments.swift; sourceTree = "<group>"; };
+		FDEE939F2A9E670B00FEBC44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FDEE93A02A9E774000FEBC44 /* LikesJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesJson.swift; sourceTree = "<group>"; };
+		FDEE93A22A9E78B700FEBC44 /* ErrorJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorJson.swift; sourceTree = "<group>"; };
+		FDEE93A62A9E8F0E00FEBC44 /* MusicPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPage.swift; sourceTree = "<group>"; };
+		FDEE93A82A9E952F00FEBC44 /* CurrentMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +121,14 @@
 		FDC1EF962A9C744A00C5B50B /* Melody */ = {
 			isa = PBXGroup;
 			children = (
+				FDEE939F2A9E670B00FEBC44 /* Info.plist */,
 				FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */,
 				FDC1EFC42A9C74CB00C5B50B /* View */,
 				FDC1EFC32A9C74C000C5B50B /* Model */,
 				FDC1EFCB2A9C78EC00C5B50B /* ViewModel */,
 				FDC1EF9B2A9C744B00C5B50B /* Assets.xcassets */,
 				FDC1EF9D2A9C744B00C5B50B /* Preview Content */,
+				FD297BD22A9F02510009DF87 /* SwiftUIView.swift */,
 			);
 			path = Melody;
 			sourceTree = "<group>";
@@ -152,6 +165,8 @@
 				FDC1EFC52A9C776400C5B50B /* Secret.swift */,
 				FDC1EFCC2A9C79DA00C5B50B /* Constant.swift */,
 				FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */,
+				FDEE93A02A9E774000FEBC44 /* LikesJson.swift */,
+				FDEE93A22A9E78B700FEBC44 /* ErrorJson.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC1EF992A9C744A00C5B50B /* ContentView.swift */,
+				FDEE93A62A9E8F0E00FEBC44 /* MusicPage.swift */,
 				FDC1EFD02A9C83BD00C5B50B /* SubView */,
 			);
 			path = View;
@@ -179,6 +195,7 @@
 				FDC1EFCE2A9C83B900C5B50B /* MusicInfo.swift */,
 				FDC1EFD12A9C947F00C5B50B /* UserComments.swift */,
 				FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */,
+				FDEE93A82A9E952F00FEBC44 /* CurrentMusic.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -315,14 +332,19 @@
 			files = (
 				FDC1EFC22A9C74BB00C5B50B /* JsonModel.swift in Sources */,
 				FD014E1C2A9E1ECB00AD0512 /* CommentsJson.swift in Sources */,
+				FDEE93A32A9E78B700FEBC44 /* ErrorJson.swift in Sources */,
 				FDC1EFC62A9C776400C5B50B /* Secret.swift in Sources */,
 				FD4FEAF62A9DB9B60014B5FB /* MusicPlayer.swift in Sources */,
+				FDEE93A72A9E8F0E00FEBC44 /* MusicPage.swift in Sources */,
 				FDC1EFD22A9C947F00C5B50B /* UserComments.swift in Sources */,
 				FDC1EFCF2A9C83B900C5B50B /* MusicInfo.swift in Sources */,
 				FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */,
 				FDC1EFCA2A9C78E500C5B50B /* DataManagerVM.swift in Sources */,
 				FDC1EF982A9C744A00C5B50B /* MelodyApp.swift in Sources */,
 				FDC1EFCD2A9C79DA00C5B50B /* Constant.swift in Sources */,
+				FDEE93A12A9E774000FEBC44 /* LikesJson.swift in Sources */,
+				FDEE93A92A9E952F00FEBC44 /* CurrentMusic.swift in Sources */,
+				FD297BD32A9F02510009DF87 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +506,7 @@
 				DEVELOPMENT_TEAM = LJT266936C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Melody/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +536,7 @@
 				DEVELOPMENT_TEAM = LJT266936C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Melody/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
