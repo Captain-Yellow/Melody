@@ -58,22 +58,22 @@ struct ContentView: View {
                 if drawerMusicPlayer {
                     HStack {
                         ZStack {
-                            RoundedRectangle(cornerRadius: 15)
+                            RoundedRectangle(cornerRadius: 5)
                                 .fill(LinearGradient(
                                     colors: [Color(red: 77/255, green: 25/255, blue: 183/255),
                                              Color(red: 14/255, green: 33/255, blue: 160/255)],
                                     startPoint: .leading, endPoint: .trailing))
-                                .colorMultiply(Color.white.opacity(0.5))
+//                                .colorMultiply(Color.white.opacity(0.5))
                                 .frame(width: geo.size.width, height: 60, alignment: .center)
-                                .border(Color(red: 77/255, green: 25/255, blue: 183/255), width: 2)
-                                .cornerRadius(15)
+//                                .border(Color(red: 77/255, green: 25/255, blue: 183/255), width: 2)
+//                                .cornerRadius(15)
                             
                             MusicPlayer()
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                .padding(0)
                             //                        .frame(width: geo.size.width, height: 100, alignment: .center)
                         }
                     }
-                    .offset(y: -44)
+                    .offset(y: -42)
                 }
             }
         }

@@ -10,96 +10,105 @@ import AVKit
 
 struct MusicPlayer: View {
     @ObservedObject var musicInfo = DataManager()
-    @State private var playerState = false
+    @State private var playingMusicState = false
+    @State internal var currentMusicTimeLine = 24.0
 //    @State private var sliderValue: Double = 24.0
     
     var body: some View {
         let safeUrl = URL(string: musicInfo.musicSound)
         let player = AVPlayer(url: safeUrl ?? URL(string: MusicJson.musicLink)!)
-        
-        HStack {
-            AsyncImage(url: URL(string: musicInfo.musicImage)) { image in
-                image.resizable()
-                    .resizable()
-                    .scaledToFill()
-                    .cornerRadius(5)
-                    .padding(.leading, 20)
-                    .frame(width: 70, height: 70, alignment: .center)
-            } placeholder: {
-                Image("placeHolderMusicImage")
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(5)
-                    .padding(.leading, 20)
-                    .frame(width: 70, height: 70, alignment: .center)
-            }
+        VStack(alignment: .center, spacing: 0) {
             
-            VStack(alignment: .leading, spacing: 9) {
-                Text("Jadeh Royaha")
-                    .bold()
-                    .font(.system(size: 14))
-                    .foregroundColor(.white)
-                
-                Text("Reza Bahram")
-                    .font(.system(size: 10))
-                    .foregroundColor(.white)
-            }.padding(.trailing, 20)
-            
-            //            VideoPlayer(player: AVPlayer(url: url))
-            //                .aspectRatio(contentMode: .fit)
-            //                .padding()
-            
-            Spacer()
+            ProgressView(value: currentMusicTimeLine, total: 100)
+                .tint(.orange)
+                .padding([.leading, .trailing], 0)
+                .offset(y: +5)
+//                .progressViewStyle(CircularProgressViewStyle(tint: .red))
             
             HStack {
-                Button(action: {
-                    
-                }) {
-                    Image(systemName: "backward.end.circle.fill")
+                AsyncImage(url: URL(string: musicInfo.musicImage)) { image in
+                    image.resizable()
                         .resizable()
-                        .frame(width: 24, height: 24, alignment: .center)
+                        .scaledToFill()
+                        .cornerRadius(5)
+                        .padding(.leading, 20)
+                        .frame(width: 70, height: 70, alignment: .center)
+                } placeholder: {
+                    Image("placeHolderMusicImage")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(5)
+                        .padding(.leading, 20)
+                        .frame(width: 70, height: 70, alignment: .center)
                 }
                 
-                Button(action: {
-                    if playerState == false {
-                        player.play()
-                        playerState = true
-                    } else {
-                        player.pause()
-                        playerState = false
+                VStack(alignment: .leading, spacing: 9) {
+                    Text("Jadeh Royaha")
+                        .bold()
+                        .font(.system(size: 14))
+                        .foregroundColor(.white)
+                    
+                    Text("Reza Bahram")
+                        .font(.system(size: 10))
+                        .foregroundColor(.white)
+                }.padding(.trailing, 20)
+                
+                //            VideoPlayer(player: AVPlayer(url: url))
+                //                .aspectRatio(contentMode: .fit)
+                //                .padding()
+                
+                Spacer()
+                
+                HStack {
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "backward.end.circle.fill")
+                            .resizable()
+                            .frame(width: 24, height: 24, alignment: .center)
                     }
-                }) {
-                    Image(systemName: playerState ? "pause.circle.fill" : "play.circle.fill")
-                        .resizable()
-                        .frame(width: 24, height: 24, alignment: .center)
+                    
+                    Button(action: {
+                        if playingMusicState == false {
+                            player.play()
+                            playingMusicState = true
+                        } else {
+                            player.pause()
+                            playingMusicState = false
+                        }
+                    }) {
+                        Image(systemName: playingMusicState ? "pause.circle.fill" : "play.circle.fill")
+                            .resizable()
+                            .frame(width: 24, height: 24, alignment: .center)
+                    }
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "forward.end.circle.fill")
+                            .resizable()
+                            .frame(width: 24, height: 24, alignment: .center)
+                    }
+                    
+                    //            VideoPlayerView(videoURL: url)
+                    //            .frame(height: 300)
+                    
+                    //            VStack {
+                    //                Slider(value: $sliderValue, in: 0...100)
+                    //            }
                 }
+                .padding(.trailing, 30)
                 
                 Button(action: {
                     
                 }) {
-                    Image(systemName: "forward.end.circle.fill")
+                    Image(systemName: "music.note.list")
                         .resizable()
                         .frame(width: 24, height: 24, alignment: .center)
-                }
-                
-                //            VideoPlayerView(videoURL: url)
-                //            .frame(height: 300)
-                
-                //            VStack {
-                //                Slider(value: $sliderValue, in: 0...100)
-                //            }
+                }.padding(.trailing, 20)
             }
-            .padding(.trailing, 30)
-            
-            Button(action: {
-                
-            }) {
-                Image(systemName: "music.note.list")
-                    .resizable()
-                    .frame(width: 24, height: 24, alignment: .center)
-            }.padding(.trailing, 20)
+            //        .background(.gray)
         }
-//        .background(.gray)
     }
 }
 

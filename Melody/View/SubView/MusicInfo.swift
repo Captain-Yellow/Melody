@@ -9,14 +9,15 @@ import SwiftUI
 
 struct MusicInfo: View {
     @State private var likeBT = false
-    @State private var musicName = "Hli"
+    @State private var musicName = ""
+    @State private var artistName = ""
     @ObservedObject var musicInfo = DataManager()
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
             HStack() {
-                Text(musicName)
+                Text("Frank Sinatra"/*musicName*/)
                     .onAppear {
                         musicName = musicInfo.musicName
                     }
@@ -38,10 +39,11 @@ struct MusicInfo: View {
                 .padding(20)
             }
             HStack {
-                Text(musicInfo.artistName)
-//                    .onAppear {
+                Text("Fly me to the Moon"/*artistName*/)
+                    .onAppear {
+                        artistName = musicInfo.artistName
 //                        musicInfo.getMusicInfoRequest(from: Secret.musicApi, parameters: ["content_id": "12", "content_type": "0"])
-//                    }
+                    }
                     .foregroundColor(.gray)
                     .bold()
                     .padding(.leading, 20)

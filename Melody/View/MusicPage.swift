@@ -76,7 +76,7 @@ struct MusicPage: View {
                          .padding(10)
                          .frame(width: UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.height / 2) - 100, alignment: .center)
                          */
-                        AsyncImage(url: URL(string: musicInfo.musicImage)) {image in
+                        AsyncImage(url: URL(string: ImageJson.musicCover/*musicInfo.musicImage*/)) {image in
                             image.resizable()
                                 .resizable()
                                 .scaledToFill()
@@ -94,9 +94,10 @@ struct MusicPage: View {
                                 .frame(width: UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.height / 2), alignment: .center)
                             
                         }
+                        
                         LinearGradient(
                             gradient: Gradient(stops: [
-                                .init(color: Color.black.opacity(0.7), location: 0),
+                                .init(color: Color.black.opacity(0.5), location: 0),
                                 .init(color: Color.black.opacity(0.1), location: 1),
                                 //                                .init(color: Color.clear, location: 0.5)
                             ]),
