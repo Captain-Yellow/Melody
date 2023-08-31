@@ -124,9 +124,9 @@ struct MusicPage: View {
                         .frame(width: 1)
                         .foregroundColor(.gray)
                     
-                    MusicPlayer()
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .frame(width: UIScreen.main.bounds.size.width, height: 50, alignment: .center)
+//                    MusicPlayer()
+//                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+//                        .frame(width: UIScreen.main.bounds.size.width, height: 50, alignment: .center)
                 }
             }.padding(.top, 45)//.frame(height: stackHeight)
             

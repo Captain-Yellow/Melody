@@ -10,6 +10,8 @@
 		FD014E1C2A9E1ECB00AD0512 /* CommentsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */; };
 		FD297BD32A9F02510009DF87 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD297BD22A9F02510009DF87 /* SwiftUIView.swift */; };
 		FD4FEAF62A9DB9B60014B5FB /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */; };
+		FD70B0522AA09C0400943FBA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70B0512AA09C0400943FBA /* Category.swift */; };
+		FD70B0542AA09C1100943FBA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70B0532AA09C1100943FBA /* Profile.swift */; };
 		FDC1EF982A9C744A00C5B50B /* MelodyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */; };
 		FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1EF992A9C744A00C5B50B /* ContentView.swift */; };
 		FDC1EF9C2A9C744B00C5B50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC1EF9B2A9C744B00C5B50B /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		FD014E1B2A9E1ECB00AD0512 /* CommentsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsJson.swift; sourceTree = "<group>"; };
 		FD297BD22A9F02510009DF87 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		FD4FEAF52A9DB9B60014B5FB /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		FD70B0512AA09C0400943FBA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FD70B0532AA09C1100943FBA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		FDC1EF942A9C744A00C5B50B /* Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1EF972A9C744A00C5B50B /* MelodyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyApp.swift; sourceTree = "<group>"; };
 		FDC1EF992A9C744A00C5B50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 			children = (
 				FDC1EF992A9C744A00C5B50B /* ContentView.swift */,
 				FDEE93A62A9E8F0E00FEBC44 /* MusicPage.swift */,
+				FD70B0512AA09C0400943FBA /* Category.swift */,
+				FD70B0532AA09C1100943FBA /* Profile.swift */,
 				FDC1EFD02A9C83BD00C5B50B /* SubView */,
 			);
 			path = View;
@@ -330,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD70B0542AA09C1100943FBA /* Profile.swift in Sources */,
 				FDC1EFC22A9C74BB00C5B50B /* JsonModel.swift in Sources */,
 				FD014E1C2A9E1ECB00AD0512 /* CommentsJson.swift in Sources */,
 				FDEE93A32A9E78B700FEBC44 /* ErrorJson.swift in Sources */,
@@ -337,6 +344,7 @@
 				FD4FEAF62A9DB9B60014B5FB /* MusicPlayer.swift in Sources */,
 				FDEE93A72A9E8F0E00FEBC44 /* MusicPage.swift in Sources */,
 				FDC1EFD22A9C947F00C5B50B /* UserComments.swift in Sources */,
+				FD70B0522AA09C0400943FBA /* Category.swift in Sources */,
 				FDC1EFCF2A9C83B900C5B50B /* MusicInfo.swift in Sources */,
 				FDC1EF9A2A9C744A00C5B50B /* ContentView.swift in Sources */,
 				FDC1EFCA2A9C78E500C5B50B /* DataManagerVM.swift in Sources */,

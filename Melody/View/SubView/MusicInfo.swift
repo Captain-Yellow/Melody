@@ -9,14 +9,14 @@ import SwiftUI
 
 struct MusicInfo: View {
     @State private var likeBT = false
-    @State var musicName = "Hli"
+    @State private var musicName = "Hli"
     @ObservedObject var musicInfo = DataManager()
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
             HStack() {
-                Text("Place Holder")
+                Text(musicName)
                     .onAppear {
                         musicName = musicInfo.musicName
                     }
@@ -38,7 +38,7 @@ struct MusicInfo: View {
                 .padding(20)
             }
             HStack {
-                Text("Place Holder")
+                Text(musicInfo.artistName)
 //                    .onAppear {
 //                        musicInfo.getMusicInfoRequest(from: Secret.musicApi, parameters: ["content_id": "12", "content_type": "0"])
 //                    }

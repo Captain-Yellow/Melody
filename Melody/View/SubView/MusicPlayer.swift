@@ -99,6 +99,7 @@ struct MusicPlayer: View {
                     .frame(width: 24, height: 24, alignment: .center)
             }.padding(.trailing, 20)
         }
+//        .background(.gray)
     }
 }
 
